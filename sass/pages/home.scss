@@ -1,22 +1,17 @@
 html, body {
     margin: 0; 
     padding: 0;
-    font-size: 15px; 
+    font-size: 16px; 
     font-family: 'Roboto', sans-serif;
 }
 
 .home-heading {
-    display: flex; 
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
+    @include column-vertical-center;
     &__logo {
         padding: 1rem 0; 
         width:100%;
         z-index: 3; 
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include center;
         
     }
     &__text--dark-grey {
@@ -24,19 +19,14 @@ html, body {
         padding: 1rem 0;
         width: 100%; 
         z-index: 2;
-        display: flex;
-        justify-content: center;
-        align-items: center; 
+        @include center;
         & > span {
             font-weight: 500;
             
         }
     }
     &__text--grey {
-        display: flex; 
-        flex-direction: column; 
-        justify-content: center;
-        align-items: center;
+        @include column-vertical-center;
         background: #eaeaea; 
         text-align: center;
         padding-top: 2rem;
@@ -47,6 +37,47 @@ html, body {
         }
     }
 }
+
+main {
+    padding: 0 2rem; 
+}
+
+.functioning__list {
+    list-style: none;
+    display:flex; 
+    flex-direction: column; 
+    padding:0;
+    &__item {
+        display: flex;
+        align-items: center;
+        background: #f6f6f6;
+        width: 85%;
+        padding: .5rem 2rem;
+        margin: 0.8rem 0;
+        border-radius: 1.5rem;
+        font-weight: 500;
+        box-shadow: 2px 9px 21px -4px rgba(0,0,0,0.17);
+
+        span {
+            position: relative;
+            right: 2.7rem;
+            width: 1rem;
+            height: 1rem;
+            padding: .3rem;
+            border-radius: 50%;
+            background: $color-primary;
+            color:white;
+            @include center;
+        }
+        i {
+            position: relative;
+            right: 1.38rem;
+            font-size: 1.3rem;
+        }
+    }
+
+}
+
 
 .btn {
     padding: 1rem 1.5rem;
