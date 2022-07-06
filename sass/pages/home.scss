@@ -76,7 +76,6 @@ main {
     }
 
 }
-
 .restaurant__card {
     height: 285px;
     width: 100%;
@@ -103,6 +102,32 @@ main {
     }
     &__info__title {
             margin-bottom: .3rem;
+    }
+    
+}
+
+
+.footer {
+    background: gray;
+    padding: 1.5rem 2.5rem;
+    color: white;
+    &__logo {
+        margin-top: 0;
+        font-size: 1.2rem;
+        font-family: "shrikhand";
+        font-weight: 400;
+        margin-bottom: .5rem;
+    }
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        &__item {
+            margin-bottom: .4rem;
+            > i {
+                margin-right: .4rem;
+            }
+        }
     }
     
 }
