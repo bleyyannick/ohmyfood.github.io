@@ -10,3 +10,68 @@ html, body {
         font-size: 1.3rem;
     }
 }
+.restaurant-picture {
+    margin: 0; 
+    width:100%;
+    height: 25rem; 
+    > img {
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover;
+    }
+}
+.restaurant {
+    display: grid; 
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    background: lightgray; 
+    position: relative;
+    z-index: 5; 
+    margin-top: - 2.5rem; 
+    border-radius: 3rem 3rem 0 0;
+    &__introduction {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 2rem 0;
+        > h1 {
+            font-family: "Shrikhand", sans-serif; 
+            font-size: 1.4rem; 
+        }
+    }
+}
+
+.restaurant-menu {
+    padding: 0 2rem;
+    > h2 {
+        font-size: 1.1rem;
+        font-weight: 300;
+    }
+    &__item {
+        background: white;
+        display: flex;
+        align-items: flex-end;
+        padding: 0.8rem 0.7rem;
+        justify-content: space-between;
+        border-radius: 1.2rem;
+        margin-bottom: 1rem;
+        h3 {
+            margin-top: 0;
+            font-size: 1.1rem;
+            margin-bottom: 0.2rem;
+            font-weight: 500;
+          }
+          > span {
+            font-size: 1rem;
+          }
+      }
+    
+    
+}
+
+.btn-center {
+    margin: 2rem auto 4rem;
+    padding: 1rem 3rem;
+    font-size: bold;
+    font-weight: 650;
+}

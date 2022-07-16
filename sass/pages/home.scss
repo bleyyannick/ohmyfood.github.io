@@ -26,7 +26,6 @@ html, body {
         width: 100%; 
         z-index: 2;
         @include center;
-        @include adjusted-position;
         & > span {
             font-weight: 500;
             
@@ -34,7 +33,6 @@ html, body {
     }
     &__text--grey {
         @include column-vertical-center;
-        @include adjusted-position;
         background: #eaeaea; 
         text-align: center;
         padding-top: 2rem;
@@ -48,7 +46,6 @@ html, body {
 
 .home-main {
     padding: 0 2rem; 
-    @include adjusted-position;
 }
 
 .functioning__list {
@@ -117,7 +114,6 @@ html, body {
 
 
 .footer {
-    @include adjusted-position;
     background: gray;
     padding: 1.5rem 2.5rem;
     color: white;
