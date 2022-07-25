@@ -13,7 +13,7 @@ html, body {
 .restaurant-picture {
     margin: 0; 
     width:100%;
-    height: 25rem; 
+    height: 20rem; 
     > img {
         width: 100%; 
         height: 100%; 
@@ -27,7 +27,7 @@ html, body {
     background: whitesmoke; 
     position: relative;
     z-index: 5; 
-    margin-top: - 2.5rem; 
+    margin-top: -4rem; 
     border-radius: 3rem 3rem 0 0;
     &__introduction {
         display: flex;
@@ -36,21 +36,26 @@ html, body {
         padding: 1rem 2rem 0;
         > h1 {
             font-family: "Shrikhand", sans-serif; 
-            font-size: 1.4rem; 
+            font-size: 1.8rem; 
         }
     }
 }
 
+
+
 .restaurant-menu {
     padding: 0 2rem;
+    
     > h2 {
         font-size: 1.1rem;
-        font-weight: 300;
+        font-weight: 400;
     }
     &__item {
+        animation: hiddenSlide 1s; 
         background: white;
         display: flex;
         align-items: flex-end;
+        box-shadow:2px 9px 21px -4px rgba(0,0,0,0.17);
         padding: 0.8rem 0.7rem;
         justify-content: space-between;
         border-radius: 1.2rem;
@@ -58,13 +63,19 @@ html, body {
         h3 {
             margin-top: 0;
             font-size: 1.1rem;
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.5rem;
             font-weight: 500;
           }
-          > span {
+          &__price {
             font-size: 1rem;
+            font-weight: 500;
           }
+          &__text {
+            font-weight: 300;
+          }
+        
       }
+      
     
     
 }
@@ -74,4 +85,34 @@ html, body {
     padding: 1rem 3rem;
     font-size: bold;
     font-weight: 650;
+    box-shadow:2px 9px 21px -4px rgba(0,0,0,0.17);
+}
+
+@media screen and (min-width: 1000px) {
+    .restaurant__container__menu{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1Fr;
+    }
+}
+
+
+@media screen and (max-width: 999px) and (min-width: 760px){
+    .restaurant__container__menu{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+
+@keyframes hiddenSlide {
+    0% {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
