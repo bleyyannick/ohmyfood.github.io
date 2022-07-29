@@ -40,7 +40,7 @@ html, body {
         &__title {
             @media screen and (min-width: 1000px) {
                 br {
-                    display:none; 
+                    display:none;
                 }
             }
             margin: 0; 
@@ -100,7 +100,15 @@ html, body {
     overflow: hidden;
     box-shadow: 2px 9px 21px -4px rgba(0,0,0,0.17);
     margin-bottom: 1.5rem; 
-    background: white;
+    background: white; 
+    transition: 400ms; 
+    &:hover{
+       filter: brightness(1.1); 
+        box-shadow: 2px 9px 21px 2px rgba(0,0,0,0.35);
+    }
+    &:active{
+        
+    }
     &__container {
         display: flex;
         align-items: center;
@@ -156,9 +164,20 @@ html, body {
     font-weight: 500;
     font-size: 0.9rem;
     background: linear-gradient(164deg, $color-secondary 0%,$color-primary 100%); 
+    box-shadow: 2px 9px 21px -4px rgba(0,0,0,0.17);
+    cursor: pointer;
     color: white; 
     border:none; 
     border-radius: 2rem; 
+    transition: .4s ease; 
+    &:hover{
+       filter: brightness(1.1); 
+       transform: translateY(.4rem);
+       box-shadow: 2px 9px 21px 2px rgba(0,0,0,0.35);
+    }
+    &:active {
+        box-shadow: 2px 9px 17px 2px rgba(0,0,0,0.5);
+    }
 }
 .fa-location-dot {
   position: relative;
