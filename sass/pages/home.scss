@@ -62,7 +62,7 @@ html, body {
         background: #f6f6f6;
         width: 85%;
         padding: .5rem 2rem;
-        margin: 0.8rem 0;
+        margin: 0.8rem;
         border-radius: 1.5rem;
         font-weight: 500;
         box-shadow: 2px 9px 21px -4px rgba(0,0,0,0.17);
@@ -105,9 +105,6 @@ html, body {
     &:hover{
        filter: brightness(1.1); 
         box-shadow: 2px 9px 21px 2px rgba(0,0,0,0.35);
-    }
-    &:active{
-        
     }
     &__container {
         display: flex;
@@ -193,6 +190,11 @@ a {
 }
 
 @media screen and (min-width: 1000px) {
+    .functioning{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
     .food{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
