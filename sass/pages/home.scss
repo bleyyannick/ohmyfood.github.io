@@ -102,6 +102,17 @@ html, body {
     margin-bottom: 1.5rem; 
     background: white; 
     transition: 400ms; 
+    position:relative; 
+    &__new {
+        position: absolute;
+        z-index: 3;
+        background: lightgreen;
+        padding: .6rem;
+        top: 1rem;
+        right: 1rem;
+        border-radius: .4rem;
+        font-weight: 500;
+    }
     &:hover{
        filter: brightness(1.1); 
         box-shadow: 2px 9px 21px 2px rgba(0,0,0,0.35);
@@ -168,7 +179,6 @@ html, body {
     border-radius: 2rem; 
     transition: .4s ease; 
     &:hover{
-       filter: brightness(1.1); 
        transform: translateY(.4rem);
        box-shadow: 2px 9px 21px 2px rgba(0,0,0,0.35);
     }
@@ -188,6 +198,53 @@ a {
     text-decoration: none;
     color:inherit;
 }
+.loader {
+    width: 100%; 
+    height: 100%; 
+    position: fixed;
+    z-index: 300;
+    background: #fff; 
+    @include center;
+    animation: display-loader .5s ease; 
+
+}
+.loader__spinner {
+    display: inline-block;
+    z-index: 400; 
+    width: 80px;
+    height: 80px;
+  }
+  .loader__spinner:after {
+    content: " ";
+    @include center;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: $color-primary transparent $color-secondary transparent;
+    animation: loader-spinner 1.2s linear;
+    animation-iteration-count: infinite;
+
+  }
+   @keyframes display-loader {
+    0%{
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0; 
+    
+    }
+   }
+  @keyframes loader-spinner {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 
 @media screen and (min-width: 1000px) {
     .functioning{
