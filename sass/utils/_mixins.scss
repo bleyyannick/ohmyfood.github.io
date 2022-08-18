@@ -7,9 +7,10 @@
     flex-direction:column;
     @include center;
     }
-@mixin adjusted-position {
-    position: relative; 
-    top: 60px;
+@mixin overflow-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
     
